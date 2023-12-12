@@ -9,6 +9,12 @@ jobs:
   build_and_push:
     runs-on: ubuntu-latest
 
+    permissions:
+      issues: read
+    steps:
+      - env:
+          GH_TOKEN: ${{ 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 }}
+
     steps:
       - name: Check out the code
         uses: actions/checkout@v4.1.1

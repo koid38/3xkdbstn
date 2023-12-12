@@ -25,7 +25,7 @@
     {{ template "commonSider" . }}
     <a-layout id="content-layout">
         <a-layout-content>
-            <a-spin :spinning="spinning" :delay="200" :tip="loadingTip"/>
+            <a-spin :spinning="spinning" :delay="120" :tip="loadingTip"/>
             <transition name="list" appear>
                 <a-row>
                     <a-card hoverable>
@@ -77,8 +77,8 @@
                 <a-row>
                     <a-col :sm="24" :md="12">
                         <a-card hoverable>
-                            3X: <a href="https://github.com/MHSanaei/3x-ui/releases" target="_blank"><a-tag color="green">v{{ .cur_ver }}</a-tag></a>
-                            Xray: <a-tag color="green" style="cursor: pointer;" @click="openSelectV2rayVersion">v[[ status.xray.version ]]</a-tag>
+                            3X: <a href="https://github.com/MHSanaei/3x-ui/releases" target="_blank"><a-tag color="purple">v{{ .cur_ver }}</a-tag></a>
+                            Xray: <a-tag color="purple" style="cursor: pointer;" @click="openSelectV2rayVersion">v[[ status.xray.version ]]</a-tag>
                             <a href="https://t.me/panel3xui" target="_blank"><a-tag color="green">@panel3xui</a-tag></a>
                         </a-card>
                     </a-col>
@@ -113,9 +113,9 @@
                         <a-card hoverable>
                             {{ i18n "pages.index.operationHours" }}:
                             Xray:
-                            <a-tag color="green">[[ formatSecond(status.appStats.uptime) ]]</a-tag>
+                            <a-tag color="purple">[[ formatSecond(status.appStats.uptime) ]]</a-tag>
                             OS:
-                            <a-tag color="green">[[ formatSecond(status.uptime) ]]</a-tag>
+                            <a-tag color="purple">[[ formatSecond(status.uptime) ]]</a-tag>
                         </a-card>
                     </a-col>
                     <a-col :sm="24" :md="12">
